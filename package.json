@@ -1,0 +1,36 @@
+{
+  "name": "preact-web-component-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adampoczatek/preact-web-component-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adampoczatek/preact-web-component-test/issues"
+  },
+  "homepage": "https://github.com/adampoczatek/preact-web-component-test#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.45.1",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@stockopedia/design-library": "^1.15.7",
+    "@wcd/preact-custom-element": "^3.1.3",
+    "classnames": "^2.3.1",
+    "htm": "^3.1.0",
+    "preact": "^10.6.4",
+    "preact-custom-element": "^4.2.1",
+    "react": "^17.0.2"
+  }
+}
