@@ -1,1 +1,1 @@
-export * from './pagination-wc'
+export * from './pagination/pagination-wc'

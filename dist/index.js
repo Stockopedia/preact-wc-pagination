@@ -2,6 +2,9 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var jsxRuntime = require('preact/jsx-runtime');
+var preact = require('preact');
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -27,10 +30,6 @@ var __assign = function() {
     };
     return __assign.apply(this, arguments);
 };
-
-var l;function d(n){return n.children}l={__e:function(n,l){for(var u,i,t;l=l.__;)if((u=l.__c)&&!u.__)try{if((i=u.constructor)&&null!=i.getDerivedStateFromError&&(u.setState(i.getDerivedStateFromError(n)),t=u.__d),null!=u.componentDidCatch&&(u.componentDidCatch(n),t=u.__d),t)return u.__E=u}catch(l){n=l;}throw n}},"function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout;
-
-var o=0;function e(_,e,n,t,f){var l$1,s,u={};for(s in e)"ref"==s?l$1=e[s]:u[s]=e[s];var a={type:_,props:u,key:n,ref:l$1,__k:null,__:null,__b:0,__e:null,__d:void 0,__c:null,__h:null,constructor:void 0,__v:--o,__source:t,__self:f};if("function"==typeof _&&(l$1=_.defaultProps))for(s in l$1)void 0===u[s]&&(u[s]=l$1[s]);return l.vnode&&l.vnode(a),a}
 
 var classnames = {exports: {}};
 
@@ -133,11 +132,11 @@ function StkPagination(_a) {
     var pages = generatePages();
     var hasPreviousPage = 0 < currentPage - 1;
     var hasNextPage = currentPage + 1 <= totalPages;
-    return (e(d, { children: e("nav", __assign({ className: "stk-pagination" }, { children: [hasPreviousPage ? (e("button", __assign({ onClick: function () { return handlePageChange(currentPage - 1); }, className: classNames('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first') }, { children: "Previous" }), void 0)) : (e("span", __assign({ className: classNames('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first', 'stk-pagination__button--disabled') }, { children: "Previous" }), void 0)), pages.map(function (page, index) { return (e(d, { children: page.number ? (e("button", __assign({ onClick: function () { return handlePageChange(page.number); }, className: classNames('stk-pagination__button', {
+    return (jsxRuntime.jsx(jsxRuntime.Fragment, { children: jsxRuntime.jsxs("nav", __assign({ className: "stk-pagination" }, { children: [hasPreviousPage ? (jsxRuntime.jsx("button", __assign({ onClick: function () { return handlePageChange(currentPage - 1); }, className: classNames('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first') }, { children: "Previous" }), void 0)) : (jsxRuntime.jsx("span", __assign({ className: classNames('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first', 'stk-pagination__button--disabled') }, { children: "Previous" }), void 0)), pages.map(function (page, index) { return (jsxRuntime.jsx(preact.Fragment, { children: page.number ? (jsxRuntime.jsx("button", __assign({ onClick: function () { return handlePageChange(page.number); }, className: classNames('stk-pagination__button', {
                             'stk-pagination__button--selected': page.selected,
                             'stk-pagination__button--first': isSeparatorPrior(page, pages),
                             'stk-pagination__button--last': isSeparatorAfter(page, pages)
-                        }) }, { children: page.number }), index)) : (e("span", __assign({ className: "stk-pagination__separator" }, { children: "\u2026" }), void 0)) }, page)); }), hasNextPage ? (e("button", __assign({ onClick: function () { return handlePageChange(currentPage + 1); }, className: classNames('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last') }, { children: "Next" }), void 0)) : (e("span", __assign({ className: classNames('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last', 'stk-pagination__button--disabled') }, { children: "Next" }), void 0))] }), void 0) }, void 0));
+                        }) }, { children: page.number }), index)) : (jsxRuntime.jsx("span", __assign({ className: "stk-pagination__separator" }, { children: "\u2026" }), void 0)) }, page)); }), hasNextPage ? (jsxRuntime.jsx("button", __assign({ onClick: function () { return handlePageChange(currentPage + 1); }, className: classNames('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last') }, { children: "Next" }), void 0)) : (jsxRuntime.jsx("span", __assign({ className: classNames('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last', 'stk-pagination__button--disabled') }, { children: "Next" }), void 0))] }), void 0) }, void 0));
 }
 function isSeparatorPrior(page, pages) {
     var _a;
