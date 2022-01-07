@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA,IAAI,CAAJ,oDAAI;AACJ,IAAI,CAAJ,qEAAI","file":"style.97fcb138.css","sourceRoot":"../src","sourcesContent":["@use \"node_modules/@stockopedia/design-library/scss/core\";\n@use \"node_modules/@stockopedia/design-library/scss/components/pagination\";\n"]}

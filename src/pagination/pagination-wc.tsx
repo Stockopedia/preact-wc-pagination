@@ -3,7 +3,7 @@ import {useRef} from "preact/hooks"
 import {StkPagination} from "./pagination";
 import {VNode} from "preact";
 
-function StkPaginationWC({ currentPage, totalPages }): VNode {
+export function StkPaginationWC({ currentPage, totalPages }): VNode {
   const ref = useRef(null);
 
   // Events
