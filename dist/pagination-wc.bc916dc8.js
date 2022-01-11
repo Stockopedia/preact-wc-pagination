@@ -1010,11 +1010,13 @@ function StkPagination(_a) {
         onClick: function onClick() {
           return handlePageChange(currentPage - 1);
         },
-        className: (0, classnames_1.default)('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first')
+        className: (0, classnames_1.default)('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first'),
+        "data-testid": "prev-button"
       }, {
         children: "Previous"
       }), void 0) : (0, jsx_runtime_1.jsx)("span", __assign({
-        className: (0, classnames_1.default)('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first', 'stk-pagination__button--disabled')
+        className: (0, classnames_1.default)('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first', 'stk-pagination__button--disabled'),
+        "data-testid": "prev-placeholder"
       }, {
         children: "Previous"
       }), void 0), pages.map(function (page, index) {
@@ -1027,11 +1029,13 @@ function StkPagination(_a) {
               'stk-pagination__button--selected': page.selected,
               'stk-pagination__button--first': isSeparatorPrior(page, pages),
               'stk-pagination__button--last': isSeparatorAfter(page, pages)
-            })
+            }),
+            "data-testid": "page-button"
           }, {
             children: page.number
           }), index) : (0, jsx_runtime_1.jsx)("span", __assign({
-            className: "stk-pagination__separator"
+            className: "stk-pagination__separator",
+            "data-testid": "page-button-hellip"
           }, {
             children: "\u2026"
           }), void 0)
@@ -1040,11 +1044,13 @@ function StkPagination(_a) {
         onClick: function onClick() {
           return handlePageChange(currentPage + 1);
         },
-        className: (0, classnames_1.default)('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last')
+        className: (0, classnames_1.default)('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last'),
+        "data-testid": "next-button"
       }, {
         children: "Next"
       }), void 0) : (0, jsx_runtime_1.jsx)("span", __assign({
-        className: (0, classnames_1.default)('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last', 'stk-pagination__button--disabled')
+        className: (0, classnames_1.default)('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last', 'stk-pagination__button--disabled'),
+        "data-testid": "next-placeholder"
       }, {
         children: "Next"
       }), void 0)]
@@ -1146,7 +1152,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56168" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55530" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
