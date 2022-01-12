@@ -5,6 +5,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
     "lib": ["es2015"],
-    "outDir": "./dist"
-  },
+    "outDir": "./dist",
+    "target": "ES5"
+  }
 }

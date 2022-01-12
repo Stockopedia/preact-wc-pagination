@@ -99,7 +99,7 @@ function StkPagination(_a) {
     var buildPageNumber = function (number) { return ({
         number: number,
         selected: number === currentPage,
-        separator: false
+        separator: false,
     }); };
     var handlePageChange = function (number) {
         onPageChange(number);
@@ -132,11 +132,11 @@ function StkPagination(_a) {
     var pages = generatePages();
     var hasPreviousPage = 0 < currentPage - 1;
     var hasNextPage = currentPage + 1 <= totalPages;
-    return (jsxRuntime.jsx(jsxRuntime.Fragment, { children: jsxRuntime.jsxs("nav", __assign({ className: "stk-pagination" }, { children: [hasPreviousPage ? (jsxRuntime.jsx("button", __assign({ onClick: function () { return handlePageChange(currentPage - 1); }, className: classNames('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first') }, { children: "Previous" }), void 0)) : (jsxRuntime.jsx("span", __assign({ className: classNames('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first', 'stk-pagination__button--disabled') }, { children: "Previous" }), void 0)), pages.map(function (page, index) { return (jsxRuntime.jsx(preact.Fragment, { children: page.number ? (jsxRuntime.jsx("button", __assign({ onClick: function () { return handlePageChange(page.number); }, className: classNames('stk-pagination__button', {
+    return (jsxRuntime.jsx(jsxRuntime.Fragment, { children: jsxRuntime.jsxs("nav", __assign({ className: "stk-pagination" }, { children: [hasPreviousPage ? (jsxRuntime.jsx("button", __assign({ onClick: function () { return handlePageChange(currentPage - 1); }, className: classNames('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first'), "data-testid": "prev-button" }, { children: "Previous" }), void 0)) : (jsxRuntime.jsx("span", __assign({ className: classNames('stk-pagination__button', 'stk-pagination__button--prev', 'stk-pagination__button--first', 'stk-pagination__button--disabled'), "data-testid": "prev-placeholder" }, { children: "Previous" }), void 0)), pages.map(function (page, index) { return (jsxRuntime.jsx(preact.Fragment, { children: page.number ? (jsxRuntime.jsx("button", __assign({ onClick: function () { return handlePageChange(page.number); }, className: classNames('stk-pagination__button', {
                             'stk-pagination__button--selected': page.selected,
                             'stk-pagination__button--first': isSeparatorPrior(page, pages),
-                            'stk-pagination__button--last': isSeparatorAfter(page, pages)
-                        }) }, { children: page.number }), index)) : (jsxRuntime.jsx("span", __assign({ className: "stk-pagination__separator" }, { children: "\u2026" }), void 0)) }, page)); }), hasNextPage ? (jsxRuntime.jsx("button", __assign({ onClick: function () { return handlePageChange(currentPage + 1); }, className: classNames('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last') }, { children: "Next" }), void 0)) : (jsxRuntime.jsx("span", __assign({ className: classNames('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last', 'stk-pagination__button--disabled') }, { children: "Next" }), void 0))] }), void 0) }, void 0));
+                            'stk-pagination__button--last': isSeparatorAfter(page, pages),
+                        }), "data-testid": "page-button" }, { children: page.number }), index)) : (jsxRuntime.jsx("span", __assign({ className: "stk-pagination__separator", "data-testid": "page-button-hellip" }, { children: "\u2026" }), void 0)) }, page)); }), hasNextPage ? (jsxRuntime.jsx("button", __assign({ onClick: function () { return handlePageChange(currentPage + 1); }, className: classNames('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last'), "data-testid": "next-button" }, { children: "Next" }), void 0)) : (jsxRuntime.jsx("span", __assign({ className: classNames('stk-pagination__button', 'stk-pagination__button--next', 'stk-pagination__button--last', 'stk-pagination__button--disabled'), "data-testid": "next-placeholder" }, { children: "Next" }), void 0))] }), void 0) }, void 0));
 }
 function isSeparatorPrior(page, pages) {
     var _a;

@@ -77,6 +77,7 @@ export function StkPagination({ totalPages, currentPage, onPageChange }: Paginat
               'stk-pagination__button--prev',
               'stk-pagination__button--first',
             )}
+            data-testid="prev-button"
           >
             Previous
           </button>
@@ -88,6 +89,7 @@ export function StkPagination({ totalPages, currentPage, onPageChange }: Paginat
               'stk-pagination__button--first',
               'stk-pagination__button--disabled',
             )}
+            data-testid="prev-placeholder"
           >
             Previous
           </span>
@@ -106,11 +108,12 @@ export function StkPagination({ totalPages, currentPage, onPageChange }: Paginat
                   'stk-pagination__button--last': isSeparatorAfter(page, pages),
                 })}
                 key={index}
+                data-testid="page-button"
               >
                 {page.number}
               </button>
             ) : (
-              <span className="stk-pagination__separator">&hellip;</span>
+              <span className="stk-pagination__separator" data-testid="page-button-hellip">&hellip;</span>
             )}
           </Fragment>
         ))}
@@ -122,6 +125,7 @@ export function StkPagination({ totalPages, currentPage, onPageChange }: Paginat
               'stk-pagination__button--next',
               'stk-pagination__button--last',
             )}
+            data-testid="next-button"
           >
             Next
           </button>
@@ -133,6 +137,7 @@ export function StkPagination({ totalPages, currentPage, onPageChange }: Paginat
               'stk-pagination__button--last',
               'stk-pagination__button--disabled',
             )}
+            data-testid="next-placeholder"
           >
             Next
           </span>
